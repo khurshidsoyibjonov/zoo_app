@@ -1,0 +1,44 @@
+.site-hedaer {
+  padding: 26px 0;
+}
+
+.header {
+  @include DisplayFlex($justify: space-between, $align: center, $gap: 0px);
+}
+
+.navbar {
+  @include DisplayFlex($justify: start, $align: center, $gap: 50px);
+}
+.navbar__link {
+  @include FontsStyle(
+    $weight: 900,
+    $size: 16px,
+    $height: 100%,
+    $fontClr: $clr-white,
+    $decoration: underline
+  );
+}
+
+.header__btn-box {
+  @include DisplayFlex($justify: start, $align: center, $gap: 30px);
+}
+.header__btn {
+  @include BtnStyle($padding: 0px, $Btn-Clr: transparent, $Btn-bg: transparent);
+}
+.header__menu-btn {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    display: none;
+  }
+  .header__menu-btn {
+    display: block;
+    @include BtnStyle(
+      $padding: 0px,
+      $Btn-Clr: transparent,
+      $Btn-bg: transparent
+    );
+  }
+}

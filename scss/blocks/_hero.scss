@@ -1,0 +1,86 @@
+.hero-section {
+  background-image: url(../../images/hero-bg.png);
+  background-position: top center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero {
+  padding-top: 206px;
+}
+.hero__text-wrapper {
+  max-width: 793px;
+}
+.hero__title {
+  @include FontsStyle(
+    $weight: 900,
+    $size: 69px,
+    $height: 100%,
+    $fontClr: $clr-white,
+    $decoration: none
+  );
+
+  margin-bottom: 40px;
+}
+.hero__btn {
+  @include BtnStyle(
+    $padding: 8px 40px,
+    $Btn-Clr: $clr-white,
+    $Btn-bg: $clr-green
+  );
+
+  @include FontsStyle(
+    $weight: 900,
+    $size: 18px,
+    $height: 100%,
+    $fontClr: $clr-white,
+    $decoration: none
+  );
+  border-radius: 5px;
+
+  @include DisplayFlex($justify: start, $align: center, $gap: 10px);
+  &:hover {
+    background-color: #4f4f4f;
+  }
+}
+
+@media (max-width: 750px) {
+  .hero-section {
+    background-position: top top;
+  }
+
+  .hero {
+    padding-top: 106px;
+  }
+  .hero__text-wrapper {
+    max-width: 599px;
+  }
+  .hero__title {
+    @include FontsStyle(
+      $weight: 900,
+      $size: 54px,
+      $height: 100%,
+      $fontClr: $clr-white,
+      $decoration: none
+    );
+
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .hero__text-wrapper {
+    max-width: 499px;
+  }
+  .hero__title {
+    @include FontsStyle(
+      $weight: 900,
+      $size: 38px,
+      $height: 100%,
+      $fontClr: $clr-white,
+      $decoration: none
+    );
+
+    margin-bottom: 20px;
+  }
+}

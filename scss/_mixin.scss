@@ -1,0 +1,31 @@
+@mixin DisplayFlex($justify, $align, $gap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin FontsStyle($weight, $size, $height, $fontClr, $decoration) {
+  font-family: "Roboto", sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $fontClr;
+
+  &:hover {
+    text-decoration: $decoration;
+  }
+}
+
+@mixin BtnStyle($padding, $Btn-Clr, $Btn-bg) {
+  border: none;
+  padding: $padding;
+  color: $Btn-Clr;
+  background-color: $Btn-bg;
+  border: 1px solid $Btn-bg;
+
+  &:hover {
+    background-color: $Btn-Clr;
+    color: $Btn-bg;
+  }
+}
