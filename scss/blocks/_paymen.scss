@@ -1,0 +1,128 @@
+.payment-section {
+  padding: 100px 0;
+}
+
+.payment {
+  margin: 0 auto;
+  @include DisplayFlex($justify: start, $align: center, $gap: 0px);
+  flex-direction: column;
+}
+.payment__text-wrapper {
+  width: 709px;
+  text-align: center;
+}
+.payment__title {
+  @include FontsStyle(
+    $weight: 900,
+    $size: 48px,
+    $height: 100%,
+    $fontClr: $clr-white,
+    $decoration: none
+  );
+
+  margin-bottom: 30px;
+}
+.payment__text {
+  @include FontsStyle(
+    $weight: 400,
+    $size: 14px,
+    $height: 100%,
+    $fontClr: $clr-white,
+    $decoration: none
+  );
+
+  margin-bottom: 90px;
+}
+.payment__content-wrapper {
+  @include DisplayFlex($justify: space-between, $align: center, $gap: 20px);
+}
+
+.content__box {
+  width: 245px;
+  height: 245px;
+  border-radius: 50%;
+  border: 1px solid $clr-green;
+  @include DisplayFlex($justify: center, $align: center, $gap: 20px);
+  flex-direction: column;
+}
+.content__text {
+  @include FontsStyle(
+    $weight: 400,
+    $size: 14px,
+    $height: 100%,
+    $fontClr: $clr-white,
+    $decoration: none
+  );
+}
+.paymnet__btn {
+  @include BtnStyle(
+    $padding: 18px 80px,
+    $Btn-Clr: $clr-white,
+    $Btn-bg: $clr-green
+  );
+
+  @include FontsStyle(
+    $weight: 900,
+    $size: 18px,
+    $height: 100%,
+    $fontClr: $clr-white,
+    $decoration: none
+  );
+  border-radius: 5px;
+
+  @include DisplayFlex($justify: start, $align: center, $gap: 10px);
+  &:hover {
+    background-color: #4f4f4f;
+  }
+  margin-top: 60px;
+}
+
+.content-img .image2 {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  .payment__content-wrapper {
+    @include DisplayFlex($justify: space-between, $align: center, $gap: 60px);
+    flex-direction: column;
+  }
+  .content-img .image1 {
+    width: 40px;
+    transform: rotate(-270deg);
+  }
+}
+
+@media (max-width: 850px) {
+  .payment__text-wrapper {
+    width: 100%;
+  }
+  .payment__title {
+    @include FontsStyle(
+      $weight: 900,
+      $size: 28px,
+      $height: 100%,
+      $fontClr: $clr-white,
+      $decoration: none
+    );
+
+    margin-bottom: 30px;
+  }
+  .payment__text {
+    @include FontsStyle(
+      $weight: 400,
+      $size: 12px,
+      $height: 100%,
+      $fontClr: $clr-white,
+      $decoration: none
+    );
+
+    margin-bottom: 90px;
+  }
+}
+
+@media (max-width: 550px) {
+  .paymnet__btn {
+    width: 100%;
+    @include DisplayFlex($justify: center, $align: center, $gap: 0px);
+  }
+}

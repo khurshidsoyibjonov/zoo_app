@@ -17,6 +17,7 @@
     $fontClr: $clr-white,
     $decoration: underline
   );
+  transition: all 0.3s;
 }
 
 .header__btn-box {

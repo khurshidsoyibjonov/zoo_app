@@ -1,0 +1,23 @@
+.zoo-section {
+  padding: 100px 0;
+}
+
+.zoo {
+  @include DisplayFlex($justify: center, $align: center, $gap: 20px);
+}
+
+@media (max-width: 950px) {
+  .crocodile {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  .gorilla {
+    display: none;
+  }
+}
+@media (max-width: 550px) {
+  .eagle {
+    display: none;
+  }
+}
