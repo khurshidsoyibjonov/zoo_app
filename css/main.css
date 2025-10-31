@@ -107,10 +107,22 @@ body {
   background-size: cover;
   width: 100%;
   height: 100vh;
+  position: relative;
 }
 
 .hero {
   padding-top: 206px;
+}
+
+.hero__socials-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
 }
 
 .hero__text-wrapper {
@@ -193,6 +205,9 @@ body {
   }
   .hero__title:hover {
     text-decoration: none;
+  }
+  .hero__socials-wrapper {
+    display: none;
   }
 }
 .work-section {
@@ -621,7 +636,7 @@ body {
   background-color: #4f4f4f;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1050px) {
   .testimonial__ttile {
     font-family: "Roboto", sans-serif;
     font-weight: 900;
