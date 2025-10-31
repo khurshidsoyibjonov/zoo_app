@@ -471,8 +471,8 @@ body {
   background-color: #4f4f4f;
 }
 
-.content-img .image2 {
-  display: none;
+.content-img .image1 {
+  height: 10px;
 }
 
 @media (max-width: 1050px) {
@@ -485,6 +485,7 @@ body {
   }
   .content-img .image1 {
     width: 40px;
+    height: 10px;
     transform: rotate(-270deg);
   }
 }
