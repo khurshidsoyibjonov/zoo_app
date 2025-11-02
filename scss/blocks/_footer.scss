@@ -1,0 +1,261 @@
+.footer-site {
+  padding: 100px 0;
+}
+
+.footer__link--box {
+  @include DisplayFlex($justify: space-between, $align: center, $gap: 0px);
+}
+.footer__link-right {
+  @include DisplayFlex($justify: space-between, $align: center, $gap: 30px);
+}
+
+.footer__input--box {
+  display: flex;
+  gap: 200px;
+  margin-top: 50px;
+}
+
+.link__list {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}
+.link__item a {
+  @include FontsStyle(
+    $weight: 400,
+    $size: 16px,
+    $height: 100%,
+    $fontClr: $clr-white,
+    $decoration: none
+  );
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.footer__btn {
+  @include BtnStyle(
+    $padding: 18px 26px,
+    $Btn-Clr: $clr-white,
+    $Btn-bg: $clr-green
+  );
+
+  @include FontsStyle(
+    $weight: 500,
+    $size: 18px,
+    $height: 100%,
+    $fontClr: $clr-white,
+    $decoration: none
+  );
+  border-radius: 5px;
+
+  transition: all 0.3s;
+  @include DisplayFlex($justify: start, $align: center, $gap: 10px);
+  &:hover {
+    background-color: #4f4f4f;
+  }
+}
+// footer left
+
+// form section
+
+.footer__left {
+  width: 383px;
+}
+.footer__left-title {
+  @include FontsStyle(
+    $weight: 900,
+    $size: 20px,
+    $height: 100%,
+    $fontClr: $clr-white,
+    $decoration: none
+  );
+  margin-bottom: 20px;
+}
+
+.footer__left-input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  padding: 10px;
+  color: #e0e0e0;
+  border: none;
+  border-bottom: 1px solid;
+  margin-bottom: 20px;
+
+  @include FontsStyle(
+    $weight: 400,
+    $size: 14px,
+    $height: 100%,
+    $fontClr: $clr-white,
+    $decoration: none
+  );
+}
+
+.footer__left-input2 {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.bottom {
+  border: 0;
+}
+.footer__fieldset {
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.footer__fieldset legend {
+  color: white;
+  padding: 0 10px;
+  text-align: start;
+  margin-left: 20px;
+
+  @include FontsStyle(
+    $weight: 400,
+    $size: 12px,
+    $height: 100%,
+    $fontClr: $clr-white,
+    $decoration: none
+  );
+}
+.footer__checkbox-label {
+  @include FontsStyle(
+    $weight: 400,
+    $size: 12px,
+    $height: 100%,
+    $fontClr: $clr-white,
+    $decoration: none
+  );
+  @include DisplayFlex($justify: start, $align: center, $gap: 10px);
+}
+.footer__left-btn {
+  display: block;
+  position: relative;
+  left: 240px;
+  border: 0;
+  background-color: transparent;
+  @include FontsStyle(
+    $weight: 900,
+    $size: 18px,
+    $height: 100%,
+    $fontClr: $clr-white,
+    $decoration: none
+  );
+  border-radius: 5px;
+  padding: 10px 30px;
+  transition: all 0.3s;
+  @include DisplayFlex($justify: start, $align: center, $gap: 10px);
+}
+// fooer right
+
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.footer__right-text {
+  margin-top: 35px;
+  @include FontsStyle(
+    $weight: 400,
+    $size: 14px,
+    $height: 140%,
+    $fontClr: $clr-white,
+    $decoration: none
+  );
+}
+.footer__right-social {
+  margin-top: 30px;
+  @include DisplayFlex($justify: start, $align: center, $gap: 20px);
+}
+.footer__right-btn {
+  margin-top: 20px;
+  @include BtnStyle(
+    $padding: 18px 80px,
+    $Btn-Clr: $clr-white,
+    $Btn-bg: $clr-green
+  );
+
+  @include FontsStyle(
+    $weight: 900,
+    $size: 18px,
+    $height: 100%,
+    $fontClr: $clr-white,
+    $decoration: none
+  );
+  border-radius: 5px;
+
+  transition: all 0.3s;
+  @include DisplayFlex($justify: start, $align: center, $gap: 10px);
+  &:hover {
+    background-color: #4f4f4f;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer__btn {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .footer__btn {
+    display: block;
+  }
+
+  .link__list {
+    display: none;
+  }
+  .footer-site {
+    padding: 40px 0;
+  }
+
+  .footer__input--box {
+    gap: 50px;
+  }
+  .footer__right-btn {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .footer__btn {
+    display: none;
+  }
+  .link__list {
+    display: block;
+  }
+
+  .footer__link--box {
+    align-items: start;
+    flex-direction: column;
+  }
+  .footer__link-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .link__list {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .footer__input--box {
+    gap: 50px;
+    flex-direction: column;
+  }
+  .footer__left-btn {
+    left: 150px;
+  }
+  .footer__right-btn {
+    display: block;
+  }
+
+  .footer__left {
+    width: 100%;
+  }
+}
